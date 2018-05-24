@@ -1,7 +1,7 @@
 .firstpage-layout {
     height: 100%;
     width: 100%;
-    background-image: url("D:/Cours/B3/ptOracle/front/my-travel/src/assets/img/background.jpg");
+    background-image: url("/home/site/wwwroot/assets/img/background.jpg");
 }
 
 .reserve-button {
