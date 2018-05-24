@@ -20,4 +20,8 @@ export class FirstpageComponent implements OnInit {
     const modalRef = this.modalService.open(RegistermodalComponent, {centered: true});
   }
 
+  getUrl() {
+    return "url('./assets/img/background.jpg')";
+  }
+
 }

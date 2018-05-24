@@ -36,13 +36,13 @@
     </div>
 
     <div class="form-group">
-        <input type="password" placeholder="mot de passe" name="password" [ngClass]="{'is-invalid': !form.get('password').valid && registerButtonClickOnce }" id="password" class="form-control" formControlName="password" />
+        <input type="password" placeholder="Mot de passe" name="password" [ngClass]="{'is-invalid': !form.get('password').valid && registerButtonClickOnce }" id="password" class="form-control" formControlName="password" />
          <!-- PASSWORD VALIDATOR TEXT -->
         <small *ngIf="(form.get('password').hasError('pattern') || form.get('password').hasError('required')) && (form.get('password').touched || registerButtonClickOnce)" class="form-text register-small">Le mot de passe doit contenir au minimum 8 caractères comprenant au moins 1 chiffre, 1 majuscule, 1 minuscule</small>
         <!-- END VALIDATOR -->
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" [ngClass]="{'is-invalid': ((!form.get('confirmPassword').valid || form.hasError('mismatch')) && registerButtonClickOnce)}" id="confirmPassword" placeholder="Confirmez le mot de passe" formControlName="confirmPassword">
+        <input type="password" class="form-control" [ngClass]="{'is-invalid': ((!form.get('confirmPassword').valid || form.hasError('mismatch')) && registerButtonClickOnce)}" id="confirmPassword" placeholder="Confirmer le mot de passe" formControlName="confirmPassword">
         <!-- CONFIRM PASSWORD VALIDATOR -->
         <small *ngIf="((form.hasError('mismatch') || !form.get('confirmPassword').valid) && (form.get('confirmPassword').touched || registerButtonClickOnce))" class="form-text register-small">Les mots de passe ne correspondent pas</small>              
         <!-- END VALIDATOR -->
