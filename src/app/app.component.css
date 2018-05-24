@@ -1,0 +1,12 @@
+.app-col-layout {
+    height: 100%;
+    width: 100%;
+    padding-left: 0px;
+}
+
+.app-layout {
+    padding-left: 15px;
+    height: calc(100% - 59px);
+    width: 100%;
+    padding-left: 0px !important;
+}

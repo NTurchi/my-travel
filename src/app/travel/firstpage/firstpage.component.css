@@ -1,0 +1,23 @@
+.firstpage-layout {
+    height: 100%;
+    width: 100%;
+    background-image: url("D:/Cours/B3/ptOracle/front/my-travel/src/assets/img/background.jpg");
+}
+
+.reserve-button {
+    width: 300px;
+    height: 60px;
+    font-size: 1.3em;
+    margin-top: 32%;
+}
+
+.firstpage-slogan {
+    font-size: 1.3em !important;
+}
+
+.firstpage-title {
+    color: white;
+    font-family: 'Pacifico';
+    font-size: 5em;
+    padding-top: 2%
+}

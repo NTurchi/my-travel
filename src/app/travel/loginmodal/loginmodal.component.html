@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4 class="modal-title">Connexion</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="form" novalidate>
+      <div class="form-group">
+        <input type="email"  id="mail" name="mail" class="form-control" placeholder="Email" formControlName="mail" />
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="mot de passe" name="password" id="password" class="form-control" formControlName="password" />
+      </div>
+    </form>
+    <div class="login-button">
+      <button class="btn btn-primary connexion-btn" (click)="login()">Se connecter</button>
+    </div>
+  </div>

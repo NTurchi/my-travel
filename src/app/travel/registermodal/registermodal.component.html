@@ -1,0 +1,54 @@
+<div class="modal-header">
+  <h4 class="modal-title">Enregistrement</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="form" novalidate>
+      <div class="form-group">
+          <input type="text"  id="lastname" name="lastname" [ngClass]="{'is-invalid': !form.get('lastname').valid && registerButtonClickOnce}" class="form-control" placeholder="Nom" formControlName="lastname" />
+    
+          <!-- LASTNAME VALIDATOR TEXT -->
+          <div *ngIf="form.get('lastname').touched || registerButtonClickOnce">
+            <small *ngIf="form.get('lastname').hasError('minlength') || form.get('lastname').hasError('required')" class="form-text register-small">Le nom est requis</small>
+            <small *ngIf="form.get('lastname').hasError('maxlength')" class="form-text register-small">Le nom ne peut excéder 30 catactères</small>            
+          </div>
+        </div>
+    <div class="form-group">
+      <input type="text"  id="firstname" name="firstname" [ngClass]="{'is-invalid': !form.get('firstname').valid && registerButtonClickOnce}" class="form-control" placeholder="Prénom" formControlName="firstname" />
+
+      <!-- FIRSTNAME VALIDATOR TEXT -->
+      <div *ngIf="form.get('firstname').touched || registerButtonClickOnce">
+        <small *ngIf="form.get('firstname').hasError('minlength') || form.get('firstname').hasError('required')" class="form-text register-small">Le prénom est requis</small>
+        <small *ngIf="form.get('firstname').hasError('maxlength')" class="form-text register-small">Le prénom ne peut excéder 30 catactères</small>            
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <input type="email" [ngClass]="{'is-invalid': !form.get('mail').valid && registerButtonClickOnce }" id="mail" name="mail" class="form-control" placeholder="Email" formControlName="mail" />
+
+      <!-- MAIL VALIDATOR TEXT -->
+      <small *ngIf="(!form.get('mail').valid && (form.get('mail').touched || registerButtonClickOnce))" class="form-text register-small">
+        Le mail doit être au format <i>email@domain.com</i>.
+    </small>
+    <!-- VALIDATOR END -->
+    </div>
+
+    <div class="form-group">
+        <input type="password" placeholder="mot de passe" name="password" [ngClass]="{'is-invalid': !form.get('password').valid && registerButtonClickOnce }" id="password" class="form-control" formControlName="password" />
+         <!-- PASSWORD VALIDATOR TEXT -->
+        <small *ngIf="(form.get('password').hasError('pattern') || form.get('password').hasError('required')) && (form.get('password').touched || registerButtonClickOnce)" class="form-text register-small">Le mot de passe doit contenir au minimum 8 caractères comprenant au moins 1 chiffre, 1 majuscule, 1 minuscule</small>
+        <!-- END VALIDATOR -->
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" [ngClass]="{'is-invalid': ((!form.get('confirmPassword').valid || form.hasError('mismatch')) && registerButtonClickOnce)}" id="confirmPassword" placeholder="Confirmez le mot de passe" formControlName="confirmPassword">
+        <!-- CONFIRM PASSWORD VALIDATOR -->
+        <small *ngIf="((form.hasError('mismatch') || !form.get('confirmPassword').valid) && (form.get('confirmPassword').touched || registerButtonClickOnce))" class="form-text register-small">Les mots de passe ne correspondent pas</small>              
+        <!-- END VALIDATOR -->
+      </div>
+  </form>
+  <div class="register-button">
+    <button class="btn btn-primary" (click)="register()">S'enregistrer</button>
+  </div>
+</div>

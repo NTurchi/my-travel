@@ -1,0 +1,8 @@
+nav {
+    background-color: rgb(230, 230, 230);
+}
+
+.navbutton-connection {
+    position: absolute;
+    right: 10px;
+}

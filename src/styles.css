@@ -1,3 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/cosmo/bootstrap.min.css');
-@import url('https://fonts.googleapis.com/css?family=Questrial');
+@import url('https://fonts.googleapis.com/css?family=Questrial|Pacifico');
+
+html {
+    background: antiquewhite;
+}
+
+html, body {
+    height: 100%;
+}
+
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.col-12 {
+    padding-right: 0px !important;
+}
+
+text-center {
+    text-align: center;
+}
