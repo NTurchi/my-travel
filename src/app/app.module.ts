@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FirstpageComponent } from './travel/firstpage/firstpage.component';
 import { NavbarComponent } from './travel/navbar/navbar.component';
 import { LoginmodalComponent } from './travel/loginmodal/loginmodal.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistermodalComponent } from './travel/registermodal/registermodal.component';
+import { AdminModule } from './travel/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RegistermodalComponent } from './travel/registermodal/registermodal.com
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent],
