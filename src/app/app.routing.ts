@@ -16,12 +16,12 @@ import { CrudClientComponent } from './travel/admin/cruds/crud-client/crud-clien
 import { CrudAdminComponent } from './travel/admin/cruds/crud-admin/crud-admin.component'
 
 const routes: Routes =  [
-  { 
-    path: '', 
-    component: FirstpageComponent 
+  {
+    path: '',
+    component: FirstpageComponent
   },
-  { 
-    path: 'admin', 
+  {
+    path: 'admin',
     component: AdminComponent,
     children: [
       { path: 'admin', redirectTo: 'admin/circuit', pathMatch: 'full'},
