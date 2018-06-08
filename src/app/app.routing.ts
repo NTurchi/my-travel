@@ -30,7 +30,6 @@ const routes: Routes =  [
       { path: 'lieu', component: CrudLieuComponent },
       { path: 'client', component: CrudClientComponent },
       { path: 'admin', component: CrudAdminComponent}
-
     ]
   }
 ];
