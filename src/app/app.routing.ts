@@ -5,15 +5,13 @@ import { CommonModule} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-
 import { AdminComponent } from './travel/admin/admin.component';
-import { AdminModule } from './travel/admin/admin.module'
-
-import { CrudCircuitComponent } from './travel/admin/cruds/crud-circuit/crud-circuit.component'
-import { CrudEtapeComponent } from './travel/admin/cruds/crud-etape/crud-etape.component'
-import { CrudLieuComponent } from './travel/admin/cruds/crud-lieu/crud-lieu.component'
-import { CrudClientComponent } from './travel/admin/cruds/crud-client/crud-client.component'
-import { CrudAdminComponent } from './travel/admin/cruds/crud-admin/crud-admin.component'
+import { AdminModule } from './travel/admin/admin.module';
+import { CrudCircuitComponent } from './travel/admin/cruds/crud-circuit/crud-circuit.component';
+import { CrudEtapeComponent } from './travel/admin/cruds/crud-etape/crud-etape.component';
+import { CrudLieuComponent } from './travel/admin/cruds/crud-lieu/crud-lieu.component';
+import { CrudClientComponent } from './travel/admin/cruds/crud-client/crud-client.component';
+import { CrudAdminComponent } from './travel/admin/cruds/crud-admin/crud-admin.component';
 
 const routes: Routes =  [
   {
