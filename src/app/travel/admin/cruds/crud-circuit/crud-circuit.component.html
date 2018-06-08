@@ -1,36 +1,103 @@
 <div class="container">
 
   <div class="row">
-      <button type="button" class="col-2 btn btn-primary btn-lg">Ajouter un circuit</button>
+      <button type="button" class="col-2 btn btn-primary btn-lg" (click)="open(content)">Ajouter un circuit</button>
   </div>
 
     <table class="table">
       <thead>
         <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Email</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th>Identifiant</th>
+          <th>VilleDepart</th>
+          <th>VilleArrivee</th>
+          <th>DateDepart</th>
+          <th>Durée</th>
+          <th>Editer</th>
+          <th>Supprimer</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>John</td>
-          <td>Doe</td>
-          <td>john@example.com</td>
+        <tr *ngFor="let c of circuits">
+          <td>{{ c.Id }}</td>
+          <td>{{ c.VilleDepart }}</td>
+          <td>{{ c.VilleArrivee }}</td>
+          <td>{{ c.DateDepart }}</td>
+          <td>{{ c.Duree }} jours</td>
           <td>
-            <button type="button" class="btn btn-primary">
-              Edit
+            <button type="button" class="btn btn-primary material-icons">
+              edit
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-danger">
-              Delete
+            <button type="button" class="btn btn-danger material-icons">
+              delete
             </button>
           </td>
         </tr>
       </tbody>
     </table>
+
+    <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title">Créer un circuit</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <form class="form-inline row">
+
+              <div class="form-group row col-sm-12 create-form-elem">
+                <label for="inputVilleDep" class="col-sm-2 col-form-label">Départ</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputVilleDep" placeholder="Nom de la ville">
+                </div>
+              </div>
+
+              <div class="form-group row col-sm-12 create-form-elem">
+                <label for="inputVilleArr" class="col-sm-2 col-form-label">Arrivée</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputVilleArr" placeholder="Nom de la ville">
+                </div>
+              </div>
+
+              <div class="input-group row col-sm-12 create-form-elem">
+                <label for="inputDateDeb" class="col-sm-2 col-form-label">Début</label>
+                <div class="col-sm-10 input-group">
+                  <input class="form-control" placeholder="yyyy-mm-dd" id="inputDateDeb"
+                        name="inputDateDeb" [(ngModel)]="dateDeb" ngbDatepicker #d="ngbDatepicker">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                      <i class="material-icons">
+                          calendar_today
+                      </i>                    
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row col-sm-12 create-form-elem">
+                <label for="inputPrix" class="col-sm-2 col-form-label">Prix</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="prix" placeholder="€">
+                </div>
+              </div>
+
+              <div class="form-group row col-sm-12 create-form-elem">
+                <label for="inputPlaces" class="col-sm-2 col-form-label">Places</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputPlaces" placeholder="Nombre de places">
+                </div>
+              </div>
+
+            </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+      </div>
+
+    </ng-template>
 
 </div>

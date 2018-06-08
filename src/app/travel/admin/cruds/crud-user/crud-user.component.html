@@ -1,0 +1,110 @@
+<div class="container">
+
+    <div class="row">
+        <button type="button" class="col-3 btn btn-primary btn-lg" (click)="open(content)">Ajouter un utilisateur</button>
+    </div>
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Identifiant</th>
+            <th>Nom complet</th>
+            <th>Email</th>
+            <th>DateNaissance</th>
+            <th>Editer</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users">
+            <td>{{ u.Id }}</td>
+            <td>{{ u.Nom }} {{ u.Prenom }}</td>
+            <td>{{ u.Email }}</td>
+            <td>{{ u.DateNaissance }}</td>
+            <td>
+              <button type="button" class="btn btn-primary material-icons">
+                edit
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger material-icons">
+                delete
+              </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary material-icons">
+                  edit
+                </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger material-icons">
+                delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title">Créer un utilisateur</h4>
+          <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+        <div class="modal-body">
+            <form class="form-inline row">
+  
+                <div class="form-group row col-sm-12 create-form-elem">
+                  <label for="inputNom" class="col-sm-2 col-form-label">Nom</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputeVilleDep" placeholder="Nom">
+                  </div>
+                </div>
+  
+                <div class="form-group row col-sm-12 create-form-elem">
+                  <label for="inputPrenom" class="col-sm-2 col-form-label">Prénom</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputVilleArr" placeholder="Prénom">
+                  </div>
+                </div>
+
+                <div class="form-group row col-sm-12 create-form-elem">
+                  <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="email">
+                  </div>
+                </div>
+  
+                <div class="input-group row col-sm-12 create-form-elem">
+                  <label for="inputDateNaiss" class="col-sm-2 col-form-label">Naissance</label>
+                  <div class="col-sm-10 input-group">
+                    <input class="form-control" placeholder="yyyy-mm-dd" id="inputDateNaiss"
+                          name="inputDateNaiss" [(ngModel)]="dateNaiss" ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                        <i class="material-icons">
+                            calendar_today
+                        </i>                    
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group form-check create-form-elem row">
+                    <label class="col-sm-10 form-check-label" for="isAdmin">Administrateur</label>
+                    <input type="checkbox" class="form-check-input col-sm-1" id="isAdmin">
+                </div>
+
+              </form>
+        </div>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+        </div>
+  
+      </ng-template>
+  
+  </div>
+  
