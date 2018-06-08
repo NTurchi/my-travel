@@ -18,6 +18,13 @@ export class HomeComponent implements OnInit {
    */
   form: FormGroup;
 
+  /**
+   * Pour filtrer les circuits par ville ou par circuit
+   * @type {boolean}
+   * @memberof HomeComponent
+   */
+  filterByCountry: boolean;
+
   constructor(private fb: FormBuilder) {
     // TODO: regader comment faire les formes selects
     this.form = fb.group({

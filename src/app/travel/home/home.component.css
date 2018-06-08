@@ -55,3 +55,74 @@ select {
 .home-layout {
     height: 97%;
 }
+
+.div-filter-by {
+    display: inline-block;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+}
+
+
+.button-by-hover {
+    background-color: #2780E3;
+    color: white;
+}
+
+.button-by {
+    width: 185px;
+    margin-right: 0px;
+}
+
+/* HOME RESULT */
+.home-result {
+    padding-top: 25px;
+    height: 100%;
+    overflow: auto;
+}
+
+.home-result-row {
+    padding-left: 55px;
+}
+
+.home-result::-webkit-scrollbar {
+    width: 12px;
+    background: transparent;
+  }
+  
+.home-result::-webkit-scrollbar-thumb {
+    background-color: #96C8FE;
+  }
+  
+
+.home-result-trip {
+    border-left: 0px solid white;
+    border-right: 0px solid white;
+    height: 100px;
+}
+
+.home-card {
+    margin-right: 30px;
+    margin-bottom: 33px;
+}
+
+.home-details-button {
+    text-align: right !important;
+}
+
+.home-card-footer {
+    width: 100%;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.home-card-footer-price {
+    text-align: left !important;
+    width: 50%;
+    display: inline-block;
+}
+
+.home-card-footer-wrapper {
+    width: 50%;
+    text-align: right;
+    display: inline-block;
+}

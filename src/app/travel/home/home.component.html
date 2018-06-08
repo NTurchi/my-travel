@@ -2,7 +2,7 @@
   <app-navbar-home></app-navbar-home>
   <div class="row home-content">
     <div class="col-3 home-col">
-      <h4>Filtres</h4>
+      <h4>Recherche</h4>
       <div class="home-filter-line"></div>
       <form class="form home-search-form" [formGroup]="form">
         <div class="form-group">
@@ -16,7 +16,11 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group div-filter-by">
+          <button class="btn btn-outline-primary apply-filter button-by" [ngClass]="{'button-by-hover': !filterByCountry}" type="submit" (click)="filterByCountry = false">Par villes</button>
+          <button class="btn btn-outline-primary apply-filter button-by" [ngClass]="{'button-by-hover': filterByCountry}"  type="submit" (click)="filterByCountry = true">Par pays</button>
+        </div>
+        <div class="form-group" *ngIf="!filterByCountry">
           <select class="form-control">
               <option selected>Ville de départ</option>
               <option>Paris</option>
@@ -24,7 +28,7 @@
               <option>Rome</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" *ngIf="!filterByCountry">
           <select class="form-control">
               <option selected>Ville d'arrivée</option>
               <option>Tokyo</option>
@@ -32,7 +36,7 @@
               <option>Paris</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" *ngIf="filterByCountry">
           <select class="form-control">
               <option selected>Pays de départ</option>
               <option>France</option>
@@ -40,7 +44,7 @@
               <option>Italie</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" *ngIf="filterByCountry">
           <select class="form-control">
               <option selected>Pays d'arrivée</option>
               <option>France</option>
@@ -76,6 +80,128 @@
           <button class="btn btn-outline-primary apply-filter" type="submit">Appliquer les filtres</button>
         </div>
       </form>    
+    </div>
+    <div class="col-9 home-result">
+      <div class="row home-result-row">
+        <div class="card home-card" style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="card home-card " style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span></span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="card home-card" style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="card home-card" style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="card home-card" style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="card home-card" style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="card home-card" style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="card home-card" style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+        <div class="card home-card" style="width: 19rem;">
+            <img class="card-img-top" src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Nice - Perpignan</h5>
+              <p class="card-text">Profitez de la chaleur du sud sur la plage autour d'un bon coktail</p>
+              <div class="home-card-footer">
+                <span class="home-card-footer-price">300€</span>
+                <span class="home-card-footer-wrapper">
+                  <a href="#" class="btn btn-outline-primary home-details-button">Détails</a>
+                </span>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
