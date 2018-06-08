@@ -7,12 +7,11 @@ import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { AdminComponent } from './travel/admin/admin.component';
-import { AdminModule } from './travel/admin/admin.module';
-import { CrudCircuitComponent } from './travel/admin/cruds/crud-circuit/crud-circuit.component';
-import { CrudEtapeComponent } from './travel/admin/cruds/crud-etape/crud-etape.component';
-import { CrudLieuComponent } from './travel/admin/cruds/crud-lieu/crud-lieu.component';
-import { CrudClientComponent } from './travel/admin/cruds/crud-client/crud-client.component';
-import { CrudAdminComponent } from './travel/admin/cruds/crud-admin/crud-admin.component';
+import { AdminModule } from './travel/admin/admin.module'
+
+import { CrudCircuitComponent } from './travel/admin/cruds/crud-circuit/crud-circuit.component'
+import { CrudLieuComponent } from './travel/admin/cruds/crud-lieu/crud-lieu.component'
+import { CrudUserComponent } from './travel/admin/cruds/crud-user/crud-user.component'
 
 const routes: Routes =  [
   {
@@ -29,10 +28,8 @@ const routes: Routes =  [
     children: [
       { path: 'admin', redirectTo: 'admin/circuit', pathMatch: 'full'},
       { path: 'circuit', component:  CrudCircuitComponent},
-      { path: 'etape', component: CrudEtapeComponent },
       { path: 'lieu', component: CrudLieuComponent },
-      { path: 'client', component: CrudClientComponent },
-      { path: 'admin', component: CrudAdminComponent}
+      { path: 'user', component: CrudUserComponent}
     ]
   }
 ];
