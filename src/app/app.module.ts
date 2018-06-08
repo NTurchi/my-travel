@@ -14,6 +14,8 @@ import { Routing } from './app.routing';
 import { HomeComponent } from './travel/home/home.component';
 import { MatIconModule, MatSliderModule } from '@angular/material';
 import { NavbarHomeComponent } from './travel/navbar-home/navbar-home.component';
+import { TravelDetailsComponent } from './travel/travel-details/travel-details.component';
+import { ReservationModalComponent } from './travel/reservation-modal/reservation-modal.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { NavbarHomeComponent } from './travel/navbar-home/navbar-home.component'
     RegistermodalComponent,
     HomeComponent,
     NavbarHomeComponent,
+    TravelDetailsComponent,
+    ReservationModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { NavbarHomeComponent } from './travel/navbar-home/navbar-home.component'
   bootstrap: [AppComponent],
   entryComponents: [
     LoginmodalComponent,
-    RegistermodalComponent
+    RegistermodalComponent,
+    ReservationModalComponent
   ]
 })
 export class AppModule { }

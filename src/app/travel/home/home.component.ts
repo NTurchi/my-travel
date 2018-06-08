@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,13 @@ export class HomeComponent implements OnInit {
    * @memberof HomeComponent
    */
   filterByCountry: boolean;
+
+  /**
+   * Détails du voyage que l'utilisateur veut voir
+   * @type {*}
+   * @memberof HomeComponent
+   */
+  selectedTrip: any;
 
   constructor(private fb: FormBuilder) {
     // TODO: regader comment faire les formes selects

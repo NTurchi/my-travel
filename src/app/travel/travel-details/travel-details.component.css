@@ -1,0 +1,104 @@
+.details-layout {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.img-size {
+  width: 100%;
+  box-shadow: 3px 3px 3px lightgrey;
+}
+
+.detail-navbar {
+  width: 100%;
+  background-color: #FFF !important;
+  border-top: 1px solid gainsboro;
+  right: 0px;
+  height: 75px;
+  bottom: 0px;
+  position: absolute;
+  right: none;
+}
+
+.btn-reserv {
+  height: 50px;
+  width: 100%;
+}
+
+.btn-reserv:focus {
+  box-shadow: none;
+}
+
+.details-price {
+  color: black;
+  font-weight: bold;
+  font-family: 'Questrial';
+  font-size: 25pt;
+  padding-right: 40px;
+}
+
+table.table-details {
+  margin-top: 28px;
+  width: 100%;
+  font-family: 'Questrial';
+  font-size: 14pt;
+  border-top: 1px solid gainsboro;
+}
+
+.details-header {
+  padding-top: 10px;
+  width: 55%;
+  text-align: left;
+  color: grey;
+}
+
+.details-value {
+  padding-top: 10px;
+  width: 45%;
+  text-align: right;
+}
+
+table.table-price {
+  width: 100%;
+  position: absolute;
+  bottom: 70px;
+}
+
+.details-price-text {
+  padding-left: 10px;
+  text-align: left;
+  color: gray;
+  font-family: 'Questrial';
+  font-size: 15pt;
+  width: 75%;
+}
+
+.details-description {
+    height: 100%;
+    overflow: auto;
+}
+
+.details-description-header {
+    width: 100%;
+    border-bottom: 1px solid gainsboro;
+    font-family: 'Questrial';
+    font-size: 25pt;
+    text-align: left;
+}
+
+.details-description-content {
+    padding-top: 10px;
+    font-family: 'Questrial';
+    font-size: 14pt;
+    text-align: justify;
+    padding-bottom: 50px;
+}
+
+ul {
+    padding-left: 0px;
+    margin-left: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}

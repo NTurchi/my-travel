@@ -1,0 +1,33 @@
+.part-input {
+    font-family: 'Questrial';
+    padding-top: 20px !important;    
+    padding-bottom: 5px !important;
+    margin-right: 20px;
+}
+
+.body-header {
+    font-family: 'Questrial';
+    font-size: 17pt;
+}
+
+.add-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 24pt;
+    color: #2780E3;
+    text-align: left;
+}
+
+.body-button {
+    padding: 0px !important;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.body-button:focus {
+    box-shadow: none;
+    border: 0px solide white;
+}

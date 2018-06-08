@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <h4 class="modal-title">Reserver ce voyage</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="body-header">
+      Participants
+      <button class="btn body-button" (click)="addParticipant()" placement="bottom" ngbTooltip="Ajouter un participant">
+        <mat-icon class="add-icon">add_circle_outline</mat-icon>  
+      </button>
+    </div>
+    <form [formGroup]="form" novalidate>
+      <table>
+        <tr>
+          <td>
+            <div class="form-group" formArrayName="participantsLastName">
+                <div class="form-input-line part-input" *ngFor="let name of form.controls['participantsLastName'].controls; let i = index">
+                  <input type="text"  id="lastName" name="lastName" class="form-control" placeholder="Nom du participant n°{{i+1}}" formControlName="{{i}}"/>          
+                </div>
+            </div>
+          </td>
+          <td>
+            <div class="form-group" formArrayName="participantsFirstName">
+                <div class="form-input-line part-input" *ngFor="let name of form.controls['participantsFirstName'].controls; let i = index">
+                  <input type="text"  id="firstName" name="firstName" class="form-control" placeholder="Prénom du participant n°{{i+1}}" formControlName="{{i}}"/>          
+                </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      
+    </form>
+    <div class="reserve-button">
+      <button class="btn btn-primary connexion-btn" (click)="reserver()">Confirmer la réservation</button>
+    </div>
+  </div>
