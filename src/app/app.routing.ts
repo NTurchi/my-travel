@@ -1,3 +1,4 @@
+import { HomeComponent } from './travel/home/home.component';
 import { FirstpageComponent } from './travel/firstpage/firstpage.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,10 @@ const routes: Routes =  [
   {
     path: '',
     component: FirstpageComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'admin',

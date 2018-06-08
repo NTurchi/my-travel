@@ -13,6 +13,7 @@ import { AdminModule } from './travel/admin/admin.module';
 import { Routing } from './app.routing';
 import { HomeComponent } from './travel/home/home.component';
 import { MatIconModule, MatSliderModule } from '@angular/material';
+import { NavbarHomeComponent } from './travel/navbar-home/navbar-home.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MatIconModule, MatSliderModule } from '@angular/material';
     LoginmodalComponent,
     RegistermodalComponent,
     HomeComponent,
+    NavbarHomeComponent,
   ],
   imports: [
     BrowserModule,

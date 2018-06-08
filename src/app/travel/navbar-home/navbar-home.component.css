@@ -1,0 +1,18 @@
+.navbar {
+    font-family: 'Pacifico';
+    color: white;
+    background-color: #96C8FE;
+    font-size: 2em;
+    padding-bottom: 18px;
+    padding-top: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.home-header {
+    font-family: 'Pacifico';
+    color: white;
+    background-color: #96C8FE;
+    text-align: center;
+    width: 100%;
+}
