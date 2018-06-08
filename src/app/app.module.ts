@@ -10,8 +10,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistermodalComponent } from './travel/registermodal/registermodal.component';
 import { AdminModule } from './travel/admin/admin.module';
-
 import { Routing } from './app.routing';
+import { HomeComponent } from './travel/home/home.component';
+import { MatIconModule, MatSliderModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Routing } from './app.routing';
     FirstpageComponent,
     NavbarComponent,
     LoginmodalComponent,
-    RegistermodalComponent
+    RegistermodalComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,9 @@ import { Routing } from './app.routing';
     NgbModule.forRoot(),
     ReactiveFormsModule,
     AdminModule,
-    Routing
+    Routing,
+    MatIconModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],
