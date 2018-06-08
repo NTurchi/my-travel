@@ -1,0 +1,65 @@
+.home-header {
+    font-family: 'Pacifico';
+    color: white;
+    background-color: #96C8FE;
+    font-size: 2em;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.home-search-form {
+    width: 100%;
+}
+
+.home-content h4 {
+    margin-top: 20px;
+}
+
+.home-col {
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.home-content .form-group {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    margin-bottom: 30px !important;
+}
+
+.home-budget {
+    margin-bottom: 20px;
+}
+
+mat-slider {
+    width: 100%;
+    color: #B0BEC5;
+}
+
+select {
+    height: 40px !important;
+}
+
+.home-filter-line {
+    border-bottom: 1px solid gainsboro;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.apply-filter {
+    margin: auto;
+    width: 100%;
+    margin-right: 35px;
+}
+
+.apply-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.home-content {
+    height: 100%;
+}
+
+.home-layout {
+    height: 90%;
+}

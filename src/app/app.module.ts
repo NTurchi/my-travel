@@ -9,6 +9,8 @@ import { LoginmodalComponent } from './travel/loginmodal/loginmodal.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistermodalComponent } from './travel/registermodal/registermodal.component';
+import { HomeComponent } from './travel/home/home.component';
+import { MatIconModule, MatSliderModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import { RegistermodalComponent } from './travel/registermodal/registermodal.com
     FirstpageComponent,
     NavbarComponent,
     LoginmodalComponent,
-    RegistermodalComponent
+    RegistermodalComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

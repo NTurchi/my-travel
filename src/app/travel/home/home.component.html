@@ -1,0 +1,85 @@
+<div class="home-layout">
+  <div class="row">
+    <div class="col-12 home-header">
+      Voyager le coeur léger !
+    </div>
+  </div>
+  <div class="row home-content">
+    <div class="col-3 home-col">
+      <h4>Filtres</h4>
+      <div class="home-filter-line"></div>
+      <form class="form home-search-form" [formGroup]="form">
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control" placeholder="Date de départ"
+                   name="dp" ngbDatepicker #d="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                <mat-icon>calendar_today</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <select class="form-control">
+              <option selected>Ville de départ</option>
+              <option>Paris</option>
+              <option>Berlin</option>
+              <option>Rome</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control">
+              <option selected>Ville d'arrivée</option>
+              <option>Tokyo</option>
+              <option>Berlin</option>
+              <option>Paris</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control">
+              <option selected>Pays de départ</option>
+              <option>France</option>
+              <option>Allemagne</option>
+              <option>Italie</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control">
+              <option selected>Pays d'arrivée</option>
+              <option>France</option>
+              <option>Allemagne</option>
+              <option>Italie</option>
+          </select>
+        </div>
+        <h5 class="home-budget">Budget</h5>
+        <div class="form-group">
+          <mat-slider
+          thumbLabel
+          [displayWith]="formatLabel"
+          tickInterval="1000"
+          min="1"
+          max="1500"></mat-slider>
+        </div>
+
+        <!-- <div class="form-group text-left">
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+               inférieur à 500 euros
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+                supérieur à 500 euros
+            </label>
+          </div>
+        </div> -->
+        <div class="form-group row text-center apply-container">
+          <button class="btn btn-outline-primary apply-filter" type="submit">Appliquer les filtres</button>
+        </div>
+      </form>    
+    </div>
+  </div>
+</div>
