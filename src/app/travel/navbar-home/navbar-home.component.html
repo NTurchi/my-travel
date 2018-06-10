@@ -10,8 +10,8 @@
           <mat-icon class="navbar-home-icon">person_pin</mat-icon>
         </button>
         <div class="dropdown-menu navbar-dropw" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Mes réservations</a>
-            <a class="dropdown-item" href="#">Se Déconnecter</a>
+            <a class="dropdown-item" (click)="goToMyReservation()">Mes réservations</a>
+            <a class="dropdown-item" (click)="goToMyHome()">Se déconnecter</a>
         </div>
       </div>
 </nav>

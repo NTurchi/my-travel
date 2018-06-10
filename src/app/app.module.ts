@@ -16,6 +16,7 @@ import { MatIconModule, MatSliderModule } from '@angular/material';
 import { NavbarHomeComponent } from './travel/navbar-home/navbar-home.component';
 import { TravelDetailsComponent } from './travel/travel-details/travel-details.component';
 import { ReservationModalComponent } from './travel/reservation-modal/reservation-modal.component';
+import { MyReservationComponent } from './travel/my-reservation/my-reservation.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ReservationModalComponent } from './travel/reservation-modal/reservatio
     NavbarHomeComponent,
     TravelDetailsComponent,
     ReservationModalComponent,
+    MyReservationComponent
   ],
   imports: [
     BrowserModule,

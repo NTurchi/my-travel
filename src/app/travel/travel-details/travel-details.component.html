@@ -9,28 +9,45 @@
         sed mi interdum vehicula. Vestibulum vulputate eros nec suscipit posuere. Cras a velit eu arcu hendrerit porttitor
         a ut ligula. Maecenas convallis tortor a est placerat elementum. Donec non leo eget odio venenatis euismod. Aliquam
         quis tortor pellentesque, fringilla turpis eget, finibus justo. Aenean orci risus, volutpat ornare tincidunt pulvinar,
-        viverra ac felis. Cras blandit risus nisl, quis congue massa rutrum a. Maecenas nec eros diam. Aenean efficitur in
-        quam sit amet sagittis. Donec blandit diam vitae odio ultricies, sed rutrum purus aliquet. Aenean ultrices mollis
-        dapibus. Pellentesque turpis ex, tristique sed sem vel, vulputate posuere turpis. Aenean a rhoncus augue, et rhoncus
-        quam.
+        viverra ac felis.
       </div>
       <div class="details-description-header">
           En passant par...
-        </div>
-        <div class="details-description-content">
+      </div>
+      <div class="details-description-content">
+        <ul>
+          <li>
+            <b>Paris</b>, le <b>13/07/2018</b> et pour une durée de <b>1 jour</b>, avec une visite de <b>la Tour Eiffel</b> pour <b>3€</b>
+          </li>
+          <li>
+            <b>Vimy</b>, le <b>14/07/2018</b> et pour une durée de <b>2 jour</b>, avec une visite du <b>crématorium</b> pour <b>5€</b>
+          </li>
+          <li>
+            <b>Barcelone</b>, le <b>16/07/2018</b> et pour une durée de <b>2 jour</b>, avec une visite de <b>la Sagrada Familia</b> pour <b>10€</b>
+          </li>            
+        </ul>
+      </div>
+
+      <div class="details-description-header">
+          En compagnie de...
+      </div>
+      <div class="details-description-content">
           <ul>
-            <li>
-              <b>Paris</b>, le <b>13/07/2018</b> et pour une durée de <b>1 jour</b>, avec une visite de <b>la Tour Eiffel</b> pour <b>3€</b>
-            </li>
-            <li>
-              <b>Vimy</b>, le <b>14/07/2018</b> et pour une durée de <b>2 jour</b>, avec une visite du <b>crématorium</b> pour <b>5€</b>
-            </li>
-            <li>
-              <b>Barcelone</b>, le <b>16/07/2018</b> et pour une durée de <b>2 jour</b>, avec une visite de <b>la Sagrada Familia</b> pour <b>10€</b>
-            </li>            
-          </ul>
-        </div>
+              <li>
+                Auguste DUPONT
+              </li>
+              <li>
+                Nicolas TURCHI
+              </li>
+              <li>
+                Arthur VERDIER
+              </li>            
+            </ul>
+      </div>
+
     </div>
+    
+
     <div class="col-4">
       <img src="https://www.studyabroad.com/sites/default/files/images/France-Study-Abroad-Programs.jpg" alt="" class="img-size">
       <table class="table-details">
@@ -54,7 +71,9 @@
         </tr>
       </table>
       <nav class="navbar navbar-light bg-light detail-navbar">
-        <button class="btn btn-primary btn-reserv" (click)="openReservationModal()">Réserver</button>
+        <button *ngIf="alreadyReserve" class="btn btn-primary btn-reserv" (click)="openReservationModal()">Modifier la liste des participants</button>
+        <button *ngIf="!alreadyReserve" class="btn btn-primary btn-reserv" (click)="openReservationModal()">Réserver</button>
+        
       </nav>
     </div>
   </div>

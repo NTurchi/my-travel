@@ -1,3 +1,4 @@
+import { MyReservationComponent } from './travel/my-reservation/my-reservation.component';
 import { HomeComponent } from './travel/home/home.component';
 import { FirstpageComponent } from './travel/firstpage/firstpage.component';
 import { AppComponent } from './app.component';
@@ -22,6 +23,10 @@ const routes: Routes =  [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'reservation',
+    component: MyReservationComponent
   },
   {
     path: 'admin',

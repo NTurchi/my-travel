@@ -10,6 +10,7 @@ import { ReservationModalComponent } from '../reservation-modal/reservation-moda
 export class TravelDetailsComponent implements OnInit {
 
   @Input() trip;
+  @Input() alreadyReserve;
 
   constructor(private modalService: NgbModal) { }
 

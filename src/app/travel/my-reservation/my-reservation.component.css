@@ -1,0 +1,36 @@
+.my-layout, .my-list, .my-details, .my-content {
+    width: 100%;
+    height: 98%;
+}
+
+.my-content {
+    margin-top: 16px;
+}
+
+.my-list {
+    border-right: 1px solid gainsboro;
+}
+
+.my-details {
+
+}
+
+.my-group-list {
+    margin-top: 30px;
+}
+
+.my-group-list li {
+    height: 50px;
+    text-align: left;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.my-group-list li:hover {
+    background-color: whitesmoke;
+}
+
+.my-group-list li a:hover {
+    text-decoration: none;
+
+}
