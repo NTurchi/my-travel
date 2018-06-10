@@ -30,10 +30,18 @@ export class ReservationModalComponent implements OnInit {
   }
 
   addParticipant() {
-    const controlFn = <FormArray>this.form.controls['participantsFirstName'];
-    const controlLn = <FormArray>this.form.controls['participantsLastName'];
+    const controlFn = this.getFirstNameControls();
+    const controlLn = this.getLastNameControls();
     controlFn.push(new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(30)]));
     controlLn.push(new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(30)]));
+  }
+
+  getFirstNameControls() {
+    return <FormArray>this.form.controls['participantsFirstName'];
+  }
+
+  getLastNameControls() {
+    return <FormArray>this.form.controls['participantsLastName'];
   }
 
   reserver() {
