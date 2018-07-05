@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { AdminComponent } from '../admin.component';
 import { CrudCircuitComponent } from '../cruds/crud-circuit/crud-circuit.component';
-import { CrudEtapeComponent } from '../cruds/crud-etape/crud-etape.component';
 import { CrudLieuComponent } from '../cruds/crud-lieu/crud-lieu.component';
-import { CrudClientComponent } from '../cruds/crud-client/crud-client.component';
-import { CrudAdminComponent } from '../cruds/crud-admin/crud-admin.component';
+import { CrudUserComponent } from '../cruds/crud-user/crud-user.component';
 
 @Component({
   selector: 'app-admin-navbar',

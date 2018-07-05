@@ -3,28 +3,15 @@ import { NgbModal, ModalDismissReasons, NgbDatepickerConfig, NgbDateStruct } fro
 import { AdminService } from '../../admin.service';
 
 @Component({
-  selector: 'app-crud-lieu',
-  templateUrl: './crud-lieu.component.html',
-  styleUrls: ['./crud-lieu.component.css']
+  selector: 'app-crud-user',
+  templateUrl: './crud-user.component.html',
+  styleUrls: ['./crud-user.component.css'],
+  providers: [NgbDatepickerConfig] // add NgbDatepickerConfig to the component providers
 })
-export class CrudLieuComponent implements OnInit {
+export class CrudUserComponent implements OnInit {
 
   closeResult: string;
-  places: Array<String>;
-  countries: Array<String>;
-  cities: Array<String>;
-
-  types = [
-    {
-      'label': 'Site'
-    },
-    {
-      'label': 'Monument'
-    },
-    {
-      'label': 'Musée'
-    }
-  ]
+  users: Array<Object>
 
   constructor(private modalService: NgbModal,
               private config: NgbDatepickerConfig,
@@ -42,10 +29,8 @@ export class CrudLieuComponent implements OnInit {
       };
     }
 
-  ngOnInit() {
-    this.places = this.adminService['places']['set'];
-    this.cities = this.adminService['cities']['set']
-    this.countries = this.adminService['countries']['set']
+  ngOnInit() { 
+    this.users = this.adminService.dataRoutes['users']['set'];
   }
 
   open(content) {
@@ -65,5 +50,4 @@ export class CrudLieuComponent implements OnInit {
       return  `with: ${reason}`;
     }
   }
-
 }
