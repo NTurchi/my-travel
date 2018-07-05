@@ -26,7 +26,7 @@ const routes: Routes =  [
     path: 'admin',
     component: AdminComponent,
     children: [
-      { path: 'admin', redirectTo: 'admin/circuit', pathMatch: 'full'},
+      { path: '', redirectTo: 'circuit', pathMatch: 'full'},
       { path: 'circuit', component:  CrudCircuitComponent},
       { path: 'lieu', component: CrudLieuComponent },
       { path: 'user', component: CrudUserComponent}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons, NgbDatepickerConfig, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { AdminService } from '../../admin.service';
 
 @Component({
   selector: 'app-crud-user',
@@ -10,9 +11,11 @@ import { NgbModal, ModalDismissReasons, NgbDatepickerConfig, NgbDateStruct } fro
 export class CrudUserComponent implements OnInit {
 
   closeResult: string;
+  users: Array<Object>
 
   constructor(private modalService: NgbModal,
-    private config: NgbDatepickerConfig) { 
+              private config: NgbDatepickerConfig,
+              private adminService: AdminService) { 
       config.minDate = {year: 1900, month: 1, day: 1};
       config.maxDate = {year: 2099, month: 12, day: 31};
   
@@ -26,7 +29,8 @@ export class CrudUserComponent implements OnInit {
       };
     }
 
-  ngOnInit() {
+  ngOnInit() { 
+    this.users = this.adminService.dataRoutes['users']['set'];
   }
 
   open(content) {

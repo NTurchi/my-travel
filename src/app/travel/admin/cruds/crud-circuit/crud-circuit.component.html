@@ -24,12 +24,12 @@
           <td>{{ c.DateDepart }}</td>
           <td>{{ c.Duree }} jours</td>
           <td>
-            <button type="button" class="btn btn-primary material-icons">
+            <button type="button" class="btn btn-primary material-icons" (click)="setSelectedCircuit(c)">
               edit
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-danger material-icons">
+            <button type="button" class="btn btn-danger material-icons" (click)="adminService.deleteData(route, c.id);unsetSelectedCircuit()">
               delete
             </button>
           </td>
@@ -38,79 +38,81 @@
     </table>
 
     <ng-template #content let-c="close" let-d="dismiss">
-      <div class="modal-header">
-        <h4 class="modal-title">Créer un circuit</h4>
-        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-          <form class="form-inline row">
-
-            <div class="input-group row col-sm-12 create-form-elem">
-                <label for="inlineFormDep" class="col-sm-2 col-form-label">Départ</label>
-                <div class="col-sm10 my-1">
-                  <select class="custom-select mr-sm-2" id="inlineFormDep">
-                    <option *ngFor="let c of cities">{{ c.Name }}</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="input-group row col-sm-12 create-form-elem">
-                <label for="inlineFormArr" class="col-sm-2 col-form-label">Arrivée</label>
-                <div class="col-sm10 my-1">
-                  <select class="custom-select mr-sm-2" id="inlineFormArr">
-                    <option *ngFor="let c of cities">{{ c.Name }}</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="input-group row col-sm-12 create-form-elem">
-                <label for="inputDateDeb" class="col-sm-2 col-form-label">Début</label>
-                <div class="col-sm-10 input-group">
-                  <input class="form-control" placeholder="yyyy-mm-dd" id="inputDateDeb"
-                        name="inputDateDeb" [(ngModel)]="dateDeb" ngbDatepicker #d="ngbDatepicker">
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
-                      <i class="material-icons">
-                          calendar_today
-                      </i>                    
-                    </button>
+        <div class="modal-header">
+            <h4 class="modal-title">Créer un circuit</h4>
+            <button type="button" class="close" aria-label="Close" (click)="c('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+  
+          <div class="modal-body">
+              <form class="form-inline row">
+    
+                <div class="input-group row col-sm-12 create-form-elem">
+                    <label for="inlineFormDep" class="col-sm-2 col-form-label">Départ</label>
+                    <div class="col-sm10 my-1">
+                      <select class="custom-select mr-sm-2" id="inlineFormDep">
+                        <option *ngFor="let c of cities">{{ c.Name }}</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              <div class="form-group row col-sm-12 create-form-elem">
-                <label for="inputLength" class="col-sm-2 col-form-label">Durée</label>
-                <div class="col-sm-9">
-                  <input type="number" class="form-control" id="inputLength">
-                </div>
-                <span class="col-sm-1" style="margin-left: -95px;"> jours</span>
-              </div>
-
-              <div class="form-group row col-sm-12 create-form-elem">
-                <label for="inputPrice" class="col-sm-2 col-form-label">Prix</label>
-                <div class="col-sm-9">
-                  <input type="number" class="form-control" id="inputPrice" placeholder="€">
-                </div>
-                <span class="col-sm-1" style="margin-left: -95px;"> euros</span>
-              </div>
-
-              <div class="form-group row col-sm-12 create-form-elem">
-                <label for="inputPlaces" class="col-sm-2 col-form-label">Places</label>
-                <div class="col-sm-10">
-                  <input type="number" class="form-control" id="inputPlaces" placeholder="Nombre de places">
-                </div>
-              </div>
-
-            </form>
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
-      </div>
-
-    </ng-template>
+    
+                  <div class="input-group row col-sm-12 create-form-elem">
+                    <label for="inlineFormArr" class="col-sm-2 col-form-label">Arrivée</label>
+                    <div class="col-sm10 my-1">
+                      <select class="custom-select mr-sm-2" id="inlineFormArr">
+                        <option *ngFor="let c of cities">{{ c.Name }}</option>
+                      </select>
+                    </div>
+                  </div>
+    
+                  <div class="input-group row col-sm-12 create-form-elem">
+                    <label for="inputDateDeb" class="col-sm-2 col-form-label">Début</label>
+                    <div class="col-sm-10 input-group">
+                      <input class="form-control" placeholder="yyyy-mm-dd" id="inputDateDeb"
+                            name="inputDateDeb" [(ngModel)]="dateDeb" ngbDatepicker #d="ngbDatepicker">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                          <i class="material-icons">
+                              calendar_today
+                          </i>                    
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="form-group row col-sm-12 create-form-elem">
+                    <label for="inputLength" class="col-sm-2 col-form-label">Durée</label>
+                    <div class="col-sm-9">
+                      <input type="number" class="form-control" id="inputLength">
+                    </div>
+                    <span class="col-sm-1" style="margin-left: -95px;"> jours</span>
+                  </div>
+    
+                  <div class="form-group row col-sm-12 create-form-elem">
+                    <label for="inputPrice" class="col-sm-2 col-form-label">Prix</label>
+                    <div class="col-sm-9">
+                      <input type="number" class="form-control" id="inputPrice" placeholder="€">
+                    </div>
+                    <span class="col-sm-1" style="margin-left: -95px;"> euros</span>
+                  </div>
+    
+                  <div class="form-group row col-sm-12 create-form-elem">
+                    <label for="inputPlaces" class="col-sm-2 col-form-label">Places</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="inputPlaces" placeholder="Nombre de places">
+                    </div>
+                  </div>
+    
+                </form>
+          </div>
+    
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark">Envoyer</button>
+            <button type="button" class="btn btn-outline-dark">Modifier</button>
+            <button type="button" class="btn btn-outline-dark" (click)="c('Close click');unsetSelectedCircuit()">Fermer</button>
+          </div>
+  
+      </ng-template>
 
 </div>

@@ -14,6 +14,8 @@ import { Routing } from './app.routing';
 import { HomeComponent } from './travel/home/home.component';
 import { MatIconModule, MatSliderModule } from '@angular/material';
 import { NavbarHomeComponent } from './travel/navbar-home/navbar-home.component';
+import { ApiService } from './service/api/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,9 +35,12 @@ import { NavbarHomeComponent } from './travel/navbar-home/navbar-home.component'
     AdminModule,
     Routing,
     MatIconModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent],
   entryComponents: [
     LoginmodalComponent,
