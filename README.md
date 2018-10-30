@@ -1,27 +1,34 @@
 # MyTravel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+This is a sample front-end application without back-end intergratio
 
-## Development server
+# Preview 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## First page of the website
+![First page](./mytravel1.PNG)
 
-## Code scaffolding
+## Login modal
+![Second page](./mytravel2.PNG)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Home page
+![Third page](./mytravel3.PNG)
 
-## Build
+# Others
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+This website has also a back-office page and a profile page. Feel free to try this project by executing this commands below (you must have nodeJs installed in your pc) :
 
-## Running unit tests
+``` npm install ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+``` npm install -g ng-cli```
 
-## Running end-to-end tests
+``` ng build ```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+``` node ./dist/index.js ```
 
-## Further help
+## Routing
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```localhost:3000/``` - Sign in page
+
+```localhost:3000/home``` - Home page
+
+```localhost:3000/admin``` - Back office page (in french) 
