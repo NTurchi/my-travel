@@ -17,6 +17,8 @@ import { NavbarHomeComponent } from './travel/navbar-home/navbar-home.component'
 import { TravelDetailsComponent } from './travel/travel-details/travel-details.component';
 import { ReservationModalComponent } from './travel/reservation-modal/reservation-modal.component';
 import { MyReservationComponent } from './travel/my-reservation/my-reservation.component';
+import { ApiService } from './service/api/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,9 +41,12 @@ import { MyReservationComponent } from './travel/my-reservation/my-reservation.c
     AdminModule,
     Routing,
     MatIconModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent],
   entryComponents: [
     LoginmodalComponent,
